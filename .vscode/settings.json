@@ -1,7 +1,0 @@
-{
-    "editor.wordWrap": "on",
-    "workbench.colorTheme": "Noctis Azureus",
-    "workbench.preferredHighContrastColorTheme": "Tomorrow Night Blue",
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.activeIconPack": "react_redux"
-}
