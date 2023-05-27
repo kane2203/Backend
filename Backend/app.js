@@ -116,11 +116,11 @@ app.delete("/deleteRecord/:collection/:id", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
 
 
 //middleware for errors
