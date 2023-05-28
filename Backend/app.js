@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // const mongoUrl = "mongodb://localhost:27017/";
 const mongoUrl = process.env.DB_URI;
 const corsOptions = {
-  origin: ["http://localhost:3000","https://Budgettrip.com"],
+  origin: ["http://localhost:3000","https://budgettrip.onrender.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   // allowedHeaders: "Content-Type,Authorization",
 };
