@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Backend/server.js",
-    "dev": "nodemon Backend/server.js"
-    
+    "dev": "nodemon Backend/server.js",
+    "build": "babel Backend -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -31,5 +31,10 @@
     "react-router-dom": "^5.2.0",
     "stripe": "^12.3.0",
     "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2"
   }
 }
