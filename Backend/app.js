@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // const mongoUrl = "mongodb://localhost:27017/";
 const mongoUrl = process.env.DB_URI;
 const corsOptions = {
-  origin: ["http://localhost:3000","https://budgettrip.onrender.com"],
+  origin: ["https://budgettrip.onrender.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   // allowedHeaders: "Content-Type,Authorization",
 };
@@ -33,7 +33,7 @@ app.use(fileUpload());
 
 app.use((req, res, next) => {
     // req.store = store;
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000 https://budgettrip.onrender.com");
+    res.setHeader("Access-Control-Allow-Origin", "https://budgettrip.onrender.com");
     res.setHeader("Access-Control-Allow-Credentials", true);
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
