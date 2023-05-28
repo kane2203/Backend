@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // const mongoUrl = "mongodb://localhost:27017/";
 const mongoUrl = process.env.DB_URI;
 const corsOptions = {
-  origin: "http://192.168.56.1:3000",
+  origin: ["http://localhost:3000","https://Budgettrip.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   // allowedHeaders: "Content-Type,Authorization",
 };
@@ -33,7 +33,7 @@ app.use(fileUpload());
 
 app.use((req, res, next) => {
     // req.store = store;
-    res.setHeader("Access-Control-Allow-Origin", "http://192.168.56.1:3000");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000 https://Budgettrip.com");
     res.setHeader("Access-Control-Allow-Credentials", true);
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -116,11 +116,11 @@ app.delete("/deleteRecord/:collection/:id", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+// });
 
 
 //middleware for errors
