@@ -9,6 +9,7 @@ const Trip = require("../models/requestsModel");
 
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
+    console.log("getting requests");
     const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: "useravatars",
         width: 150,
